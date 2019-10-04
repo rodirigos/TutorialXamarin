@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Tutorial.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout Orientation="Vertical"
+                 VerticalOptions="Start"
+                 BackgroundColor="Transparent">
+        <!-- Place new controls here -->
+        <Image Source="teste.jpg" 
+               HeightRequest="150"
+               Opacity=".5"></Image>
+        <Label Margin="10,0,10,0" Text="Login"/>
+        <Entry Margin="10,0,10,0" Text="{Binding Email}" Placeholder="E-mail" />
+        <Label Margin="10,0,10,0" Text="Senha"/>
+        <Entry Margin="10,0,10,0" Text="{Binding Senha}" Placeholder="Senha" IsPassword="True" />
+        <Button x:Name="btnEntrar"  Clicked="btnEntrar_Clicked" Text="ENTRAR"></Button>
+        <Label x:Name="lblEsqueciMinhaSenha" Text="Esqueci minha senha" 
+               TextColor="Blue" 
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="10,0,10,0"/>
+    </StackLayout>
+
+</ContentPage>
